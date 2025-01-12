@@ -1,6 +1,6 @@
 # 🎵 Spotify Streaming Data Analysis
 
-![https://github.com/Omarnot2far/Spotify_Streaming_Data-_Analysis/blob/main/Spotify_Full_Logo_RGB_Green.png]
+!![Project Logo](https://github.com/Omarnot2far/Spotify_Streaming_Data-_Analysis/blob/main/Spotify_Full_Logo_RGB_Green.png)
 
 
 ---
