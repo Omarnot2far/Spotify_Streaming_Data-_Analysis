@@ -58,5 +58,3 @@ CREATE TABLE spotify_streaming_data (
     shuffle BOOLEAN,
     skipped BOOLEAN
 );
-
----
