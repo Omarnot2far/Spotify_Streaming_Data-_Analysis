@@ -59,13 +59,15 @@ CREATE TABLE spotify_streaming_data (
     skipped BOOLEAN
 );
 
+---
 
 ##❓ Business Questions Tackled
 
 ### 1. User Engagement and Retention
 ### Problem: How much time do users spend listening to music on each platform?
 
-``` sql
+
+```sql
 Select platform, sum(ms_played)/6000 as total_minutes_played
 from spotify_streaming_data
 GROUP BY platform
