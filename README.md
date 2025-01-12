@@ -1,7 +1,7 @@
 # 🎵 Spotify Streaming Data Analysis
 
-[https://github.com/Omarnot2far/Spotify_Streaming_Data-_Analysis/blob/main/Spotify_Full_Logo_RGB_Green.png]
-*Add your logo image file to the GitHub repository and use the path here, e.g., `/images/logo.png`.*
+![https://github.com/Omarnot2far/Spotify_Streaming_Data-_Analysis/blob/main/Spotify_Full_Logo_RGB_Green.png]
+
 
 ---
 
