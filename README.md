@@ -20,6 +20,8 @@ The primary goal of this project is to:
 
 ## 📂 Dataset
 
+dataset: https://mavenanalytics.io/challenges/maven-music-challenge/e161353d-9967-4297-869c-505de168e610
+
 The dataset contains detailed Spotify streaming logs with the following columns:
 
 | **Field**            | **Description**                                                                 |
