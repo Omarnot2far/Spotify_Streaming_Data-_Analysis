@@ -59,11 +59,15 @@ CREATE TABLE spotify_streaming_data (
     skipped BOOLEAN
 );
 
+---
+
 
 ## ❓ Business Questions Tackled
 
 1. User Engagement and Retention
+
 Problem: How much time do users spend listening to music on each platform?
+
 
 ```sql
 Select platform,
