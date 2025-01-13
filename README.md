@@ -61,7 +61,8 @@ CREATE TABLE spotify_streaming_data (
 
 
 
-❓ Business Questions Solved with SQL
+# ❓ Business Questions Solved with SQL
+
 1. User Engagement
 How much time do users spend listening to music on each platform?
 
