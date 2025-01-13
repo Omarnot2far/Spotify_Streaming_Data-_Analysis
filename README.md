@@ -58,4 +58,21 @@ CREATE TABLE spotify_streaming_data (
     shuffle BOOLEAN,
     skipped BOOLEAN
 );
----
+
+
+
+❓ Business Questions Solved with SQL
+1. User Engagement
+How much time do users spend listening to music on each platform?
+
+'''sql
+
+SELECT 
+    platform, 
+    SUM(ms_played) / 60000 AS total_minutes_played
+FROM spotify_streaming_data
+GROUP BY platform
+ORDER BY total_minutes_played DESC;
+
+
+
