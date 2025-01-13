@@ -65,7 +65,7 @@ CREATE TABLE spotify_streaming_data (
 1. User Engagement
 How much time do users spend listening to music on each platform?
 
-'''sql
+```sql
 
 SELECT 
     platform, 
