@@ -75,7 +75,8 @@ FROM spotify_streaming_data
 GROUP BY platform
 ORDER BY total_minutes_played DESC;
 ```
-![1 Logo] ()
+![1 Logo](https://github.com/Omarnot2far/Spotify_Streaming_Data-_Analysis/blob/main/1.platform.png)
+
 ## 2. Track Performance
 ### Problem: What are the top 10 most-played tracks?
 
