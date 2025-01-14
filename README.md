@@ -117,12 +117,21 @@ LIMIT 10;
 ## 5. Reasons for Playback
 ### What are the common reasons users start and stop tracks?
 ```sql
-Select 
-    reason_start,   
-    reason_end, 
-    COUNT(*) AS occurrences
-from spotify_streaming_data
-Group By reason_start, reason_end
+SELECT
+	reason_start,
+	COUNT(*) AS occurrences
+FROM spotify_streaming_data
+GROUP BY reason_start
+ORDER BY occurrences DESC
+LIMIT 10;
+```
+
+```sql
+SELECT
+	reason_end,
+	COUNT(*) AS occurrences
+FROM spotify_streaming_data
+GROUP BY reason_end
 ORDER BY occurrences DESC
 LIMIT 10;
 ```
