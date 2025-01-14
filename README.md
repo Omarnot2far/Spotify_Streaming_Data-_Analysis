@@ -116,6 +116,7 @@ LIMIT 10;
 ```
 ## 5. Reasons for Playback
 ### What are the common reasons users start and stop tracks?
+#### reasons to start the tracks
 ```sql
 SELECT
 	reason_start,
@@ -125,7 +126,7 @@ GROUP BY reason_start
 ORDER BY occurrences DESC
 LIMIT 10;
 ```
-
+#### reasons to end the tracks
 ```sql
 SELECT
 	reason_end,
@@ -163,17 +164,7 @@ SELECT
 FROM spotify_streaming_data
 GROUP BY shuffle;
 ```
-## 9. Track Starting Patterns
-### Which reasons drive the most track starts?
-```sql
-SELECT 
-    reason_start, 
-    COUNT(*) AS occurrences
-FROM spotify_streaming_data
-GROUP BY reason_start
-ORDER BY occurrences DESC;
-```
-## 10. Skipped Tracks Analysis
+## 9. Skipped Tracks Analysis
 ### Which tracks have the highest skip rate?
 ```sql
 SELECT
@@ -188,7 +179,7 @@ HAVING COUNT(*) > 10  -- Only consider tracks with more than 10 plays
 ORDER BY skip_rate DESC
 LIMIT 10;
 ```
-## 11. Album Analysis
+## 10. Album Analysis
 ### Which albums have the highest average playtime per track?
 ```sql
 SELECT 
@@ -199,7 +190,7 @@ GROUP BY album_name
 ORDER BY avg_play_time_minutes DESC
 LIMIT 10;
 ```
-## 12. Platform Preferences
+## 11. Platform Preferences
 ### Which platform is preferred for specific genres or artists?
 ```sql
 SELECT 
