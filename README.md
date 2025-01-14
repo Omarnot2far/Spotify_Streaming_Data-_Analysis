@@ -63,7 +63,7 @@ CREATE TABLE spotify_streaming_data (
 
 
 
-## 1. User Engagement
+## 1. User Engagement and Retention
 ### How much time do users spend listening to music on each platform?
 
 
@@ -75,4 +75,17 @@ FROM spotify_streaming_data
 GROUP BY platform
 ORDER BY total_minutes_played DESC;
 ```
+![1 Logo] ()
+## 2. Track Performance
+### Problem: What are the top 10 most-played tracks?
 
+```sql
+SELECT 
+    track_name, 
+    artist_name, 
+    SUM(ms_played)/60000 AS total_minutes_played
+FROM spotify_streaming_data
+GROUP BY track_name, artist_name
+ORDER BY total_minutes_played DESC
+LIMIT 10;
+```
