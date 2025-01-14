@@ -103,7 +103,7 @@ SELECT
 FROM spotify_streaming_data
 GROUP BY shuffle;
 ```
-![Project Logo]()
+![Project Logo](3.shuffle.png)
 ## 4. Artist and Album Popularity
 ### Which artist has the highest total playtime?
 
@@ -116,7 +116,7 @@ group by artist_name
 ORDER BY total_minutes_played DESC
 LIMIT 10;
 ```
-![Project Logo]()
+![Project Logo](4.artist_playtime.png)
 ## 5. Reasons for Playback
 ### What are the common reasons users start and stop tracks?
 #### reasons to start the tracks
@@ -129,7 +129,7 @@ GROUP BY reason_start
 ORDER BY occurrences DESC
 LIMIT 10;
 ```
-![Project Logo]()
+![Project Logo](5.reason_start.png)
 #### reasons to end the tracks
 ```sql
 SELECT
@@ -140,7 +140,7 @@ GROUP BY reason_end
 ORDER BY occurrences DESC
 LIMIT 10;
 ```
-![Project Logo]()
+![Project Logo](5.reason_end.png)
 ## 6. Track Completion Rate
 ### How many tracks are played fully without skipping?
 ```sql
@@ -150,7 +150,7 @@ SELECT
     ROUND(SUM(CASE WHEN skipped = FALSE THEN 1 ELSE 0 END)::DECIMAL * 100 / COUNT(*), 2) AS completion_rate
 FROM spotify_streaming_data;
 ```
-![Project Logo]()
+![Project Logo](6.tranck_comp_rate_witoutskip.png)
 ## 7. Time-Based Trends
 ### What is the hourly trend for music streaming activity?
 ```sql
@@ -161,7 +161,7 @@ FROM spotify_streaming_data
 GROUP BY EXTRACT(HOUR FROM ts)
 ORDER BY hour_of_day;
 ```
-![Project Logo]()
+![Project Logo](7.hour.png)
 ## 8. Impact of Shuffle Mode
 ### Does shuffle mode increase or decrease total listening time?
 ```sql
@@ -171,7 +171,7 @@ SELECT
 FROM spotify_streaming_data
 GROUP BY shuffle;
 ```
-![Project Logo]()
+![Project Logo](8.impact_suffle.png)
 ## 9. Skipped Tracks Analysis
 ### Which tracks have the highest skip rate?
 ```sql
@@ -187,7 +187,7 @@ HAVING COUNT(*) > 10  -- Only consider tracks with more than 10 plays
 ORDER BY skip_rate DESC
 LIMIT 10;
 ```
-![Project Logo]()
+![Project Logo](9.skip_rate_tracks_artist.png)
 ## 10. Album Analysis
 ### Which albums have the highest average playtime per track?
 ```sql
@@ -199,7 +199,7 @@ GROUP BY album_name
 ORDER BY avg_play_time_minutes DESC
 LIMIT 10;
 ```
-![Project Logo]()
+![Project Logo](10.high_avg_play_album.png)
 ## 11. Platform Preferences
 ### Which platform is preferred for specific genres or artists?
 ```sql
@@ -212,4 +212,4 @@ GROUP BY platform, artist_name
 ORDER BY total_minutes_played DESC
 LIMIT 10;
 ```
-![Project Logo]()
+![Project Logo](11.platform_artist.png)
